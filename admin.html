@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="shortcut icon"
+      href="/image/zionhilt-favicon.jpg"
+      type="jpg"
+      sizes="32x32"
+    />
+
+    <!-- Styling -->
+    <link rel="stylesheet" href="main.css" />
+    <title>Admin Register Staff</title>
+  </head>
+  <body>
+    <!-- Staff Input -->
+    <section class="form_group_wrapper" id="staffInput">
+      <form action="">
+        <div>
+          <h2>Staff Register Page</h2>
+        </div>
+        <div class="form_input">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" />
+        </div>
+        <div class="form_input">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" />
+        </div>
+        <div class="form_input_gender">
+          <label style="font-family: cursive; font-style: italic" for="sex"
+            >Gender:</label
+          >
+          <label for="">Male</label>
+          <input type="radio" name="gender" value="male" id="male" />
+          <label for="">Female</label>
+          <input type="radio" name="gender" id="female" value="female" />
+        </div>
+        <div class="form_input">
+          <label for="dob">DOB</label>
+          <input type="date" id="dob" />
+        </div>
+        <div class="form_input">
+          <label for="telephoneNum">Telephone Number</label>
+          <input type="tel" id="telphoneNum" />
+        </div>
+        <div class="form_input">
+          <label for="homeAddress">Home Address</label>
+          <input type="text" id="addressHome" />
+        </div>
+        <div class="form_input">
+          <label for="permanentAddress">Permanent Address</label>
+          <input type="text" id="addressPer" />
+        </div>
+        <div class="form_input">
+          <label for="passport">Passport</label>
+          <input type="file" accept="jpg, jpeg, png" id="passport" />
+        </div>
+        <div class="form_input">
+          <label for="post">Post</label>
+          <select name="" id="selector">
+            <option value="">Choose...</option>
+            <option value="casualWorker">Casual Worker</option>
+            <option value="industrialTraining">IT</option>
+            <option value="instructor">Instructor</option>
+            <option value="facilitator">Facilitator</option>
+            <option value="softwareDeveloper">SD Student</option>
+            <option value="graphicsDesigner">UI/UX Student</option>
+          </select>
+        </div>
+        <button type="submit" id="submitBtn">Submit</button>
+        <button type="reset">Reset</button>
+      </form>
+    </section>
+
+    <!-- Search Staff Info -->
+    <section class="staffInfo">
+      <div class="staffInfoInput">
+        <h1>Search Staff Info</h1>
+        <input
+          type="search"
+          name=""
+          id="searchInfo"
+          placeholder="StaffID, Name"
+        />
+      </div>
+    </section>
+    <!-- Search Staff Info End -->
+
+    <!-- JS File -->
+    <script src="effect.js"></script>
+  </body>
+</html>

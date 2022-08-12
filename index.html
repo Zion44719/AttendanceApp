@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="shortcut icon"
+      href="/image/zionhilt-favicon.jpg"
+      type="jpg"
+      sizes="32x32"
+    />
+
+    <!-- Styling -->
+    <link rel="stylesheet" href="form.css" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Staff Attendance App</title>
+  </head>
+  <body>
+    <section id="d-head" class="d-head">
+      <div class="wrapper">
+        <h2>Attendance App</h2>
+        <div class="logo"></div>
+        <div class="login_wrapper btn">
+          <a href="">Explore</a>
+          <a href="#" class="btns form1" id="admin">Admin Login</a>
+        </div>
+      </div>
+      <div class="copyright">
+        Copyright &copy; 2022 | Zionhilt Technologies &trade; | All Right
+        Reserved.
+      </div>
+    </section>
+
+    <!-- Admin Login Form -->
+    <div id="mainButton" class="admin-login">
+      <div class="modal">
+        <div class="close-button" onclick="closeForm()">x</div>
+        <div class="form-title">Admin Page</div>
+        <div class="input-group">
+          <input
+            type="text"
+            id="name"
+            onblur="checkInput(this)"
+            placeholder="Full Name:"
+          />
+        </div>
+        <div class="input-group">
+          <input
+            type="email"
+            id="email"
+            onblur="checkInput(this)"
+            placeholder="Email:"
+          />
+        </div>
+        <div class="input-group">
+          <input
+            type="password"
+            id="password"
+            onblur="checkInput(this)"
+            placeholder="Password: ******"
+          />
+        </div>
+
+        <div class="form-button">
+          <a onclick="auth();">Submit</a>
+        </div>
+        <div class="copyright">
+          Copyright &copy; 2022 | Zionhilt Technologies &trade; | All Right
+          Reserved.
+        </div>
+      </div>
+    </div>
+    <!-- Admin Login Form End -->
+
+    <!-- JS File -->
+    <script src="form.js"></script>
+  </body>
+</html>
