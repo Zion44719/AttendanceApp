@@ -62,7 +62,7 @@ body {
 .display_head {
   border: 2px solid green;
   width: 50%;
-  height: 50vh;
+  height: 60vh;
   background-color: rgba(76, 186, 186, 0.425);
   border-radius: 5px;
 }
@@ -83,13 +83,14 @@ body {
 
 .staff_pix {
   border: 2px solid blue;
-  border-radius: 10px;
-  width: 40%;
-  height: 20vh;
+  border-radius: 80%;
+  width: 160px;
+  height: 160px;
   margin: 15px 0 10px 0;
 }
 
 .staff_info_wrapper {
+  margin-top: 20px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -105,6 +106,14 @@ body {
   position: absolute;
   top: 26%;
   left: 26%;
+  text-decoration: none;
+}
+
+.admin_back_home a {
+  position: absolute;
+  top: 3%;
+  left: 31%;
+  font-size: 1.5em;
   text-decoration: none;
 }
 
@@ -311,9 +320,9 @@ form h2 {
 
   .staff_pix {
     border: 2px solid blue;
-    border-radius: 10px;
-    width: 40%;
-    height: 20vh;
+    border-radius: 90px;
+    width: 180px;
+    height: 180px;
     margin: 15px 0 10px 0;
   }
 
@@ -339,6 +348,14 @@ form h2 {
     position: absolute;
     top: 25%;
     left: 8%;
+    text-decoration: none;
+  }
+
+  .admin_back_home a {
+    position: absolute;
+    top: 3%;
+    left: 11%;
+    font-size: 1.5em;
     text-decoration: none;
   }
 

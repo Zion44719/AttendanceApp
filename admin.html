@@ -35,9 +35,9 @@
           <label style="font-family: cursive; font-style: italic" for="sex"
             >Gender:</label
           >
-          <label for="">Male</label>
+          <label for="male">Male</label>
           <input type="radio" name="gender" value="male" id="male" />
-          <label for="">Female</label>
+          <label for="female">Female</label>
           <input type="radio" name="gender" id="female" value="female" />
         </div>
         <div class="form_input">
@@ -46,7 +46,7 @@
         </div>
         <div class="form_input">
           <label for="telephoneNum">Telephone Number</label>
-          <input type="tel" id="telphoneNum" />
+          <input type="tel" id="telphoneNum" placeholder="+234" />
         </div>
         <div class="form_input">
           <label for="homeAddress">Home Address</label>
@@ -90,6 +90,12 @@
       </div>
     </section>
     <!-- Search Staff Info End -->
+
+    <div class="admin_back_home">
+      <a href="index.html">🔙</a>
+    </div>
+
+    <div id="showRecord"></div>
 
     <!-- JS File -->
     <script src="effect.js"></script>

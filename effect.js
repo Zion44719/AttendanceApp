@@ -10,30 +10,36 @@ const addressPer = document.getElementById("addressPer");
 const selector = document.getElementById("selector");
 const passport = document.getElementById("passport");
 
+const showRecord = document.getElementById("showRecord");
+
 let staffData = [];
+
+// let dataOutput = staffData;
+// console.log(dataOutput);
 
 submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
   //   Accessing the database
-  let userProfile = {
-    firstName: firstName.value,
-    lastName: lastName.value,
-    male: male.value,
-    female: female.value,
-    dob: dob.value,
-    telephoneNum: telephoneNum.value,
-    addressH: addressH.value,
-    addressPer: addressPer.value,
-    selector: selector.value,
-    passport: passport.value,
-  };
-
-  refreshForm();
+  // let userProfile = {
+  //   firstName: firstName.value,
+  //   lastName: lastName.value,
+  //   male: male.value,
+  //   female: female.value,
+  //   dob: dob.value,
+  //   telephoneNum: telephoneNum.value,
+  //   addressH: addressH.value,
+  //   addressPer: addressPer.value,
+  //   selector: selector.value,
+  //   passport: passport.value,
+  // };
 
   // Pushing to an empty array
-  staffData.push(userProfile);
-  console.log(staffData);
+  // staffData.push(userProfile);
+  refreshForm();
+  addToLocalStorage();
+  showDOM();
+  // console.log(staffData);
 });
 
 function refreshForm() {
@@ -47,4 +53,43 @@ function refreshForm() {
   addressPer.value = "";
   selector.value = "";
   passport.value = "";
+}
+
+function showDOM() {
+  staffData.forEach((staff) => {
+    showRecord.innerHTML += `
+
+<p>Firstname: ${staff.firstName}</p>
+<p>Lastname: ${staff.lastName}</p>
+<p>Male: ${staff.male}</p>
+<p>Female: ${staff.female}</p>
+<p>DOB: ${staff.dob}</p>
+<p>Telephone: ${staff.telephoneNum}</p>
+<p>Home Address: ${staff.addressH}</p>
+<p>Permanent Address: ${staff.addressPer}</p>
+<p>Position: ${staff.selector}</p>
+<p>Passport: ${staff.passport}</p> <br  />
+`;
+  });
+
+  console.log(showRecord);
+}
+
+// ********* Local Sotrage *********
+function addToLocalStorage() {
+  let userProfile = {
+    firstName: firstName.value,
+    lastName: lastName.value,
+    male: male.value,
+    female: female.value,
+    dob: dob.value,
+    telephoneNum: telephoneNum.value,
+    addressH: addressH.value,
+    addressPer: addressPer.value,
+    selector: selector.value,
+    passport: passport.value,
+  };
+  staffData.push(userProfile);
+  localStorage.setItem("stafData", JSON.stringify(staffData));
+  console.log(localStorage);
 }
