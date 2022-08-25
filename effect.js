@@ -12,33 +12,32 @@ const passport = document.getElementById("passport");
 
 const showRecord = document.getElementById("showRecord");
 
-let staffData = [];
-
-// let dataOutput = staffData;
-// console.log(dataOutput);
+let staffData = JSON.parse(localStorage.getItem("stafData")) || [];
+// console.log(staffData);
 
 submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
   //   Accessing the database
-  // let userProfile = {
-  //   firstName: firstName.value,
-  //   lastName: lastName.value,
-  //   male: male.value,
-  //   female: female.value,
-  //   dob: dob.value,
-  //   telephoneNum: telephoneNum.value,
-  //   addressH: addressH.value,
-  //   addressPer: addressPer.value,
-  //   selector: selector.value,
-  //   passport: passport.value,
-  // };
+  let userProfile = {
+    firstName: firstName.value,
+    lastName: lastName.value,
+    male: male.value,
+    female: female.value,
+    dob: dob.value,
+    telephoneNum: telephoneNum.value,
+    addressH: addressH.value,
+    addressPer: addressPer.value,
+    selector: selector.value,
+    passport: passport.value,
+  };
 
-  // Pushing to an empty array
-  // staffData.push(userProfile);
+  staffData.push(userProfile);
+  localStorage.setItem("staffData", JSON.stringify(staffData));
+
   refreshForm();
   addToLocalStorage();
-  showDOM();
+  // showDOM();
   // console.log(staffData);
 });
 
@@ -77,19 +76,7 @@ function showDOM() {
 
 // ********* Local Sotrage *********
 function addToLocalStorage() {
-  let userProfile = {
-    firstName: firstName.value,
-    lastName: lastName.value,
-    male: male.value,
-    female: female.value,
-    dob: dob.value,
-    telephoneNum: telephoneNum.value,
-    addressH: addressH.value,
-    addressPer: addressPer.value,
-    selector: selector.value,
-    passport: passport.value,
-  };
   staffData.push(userProfile);
-  localStorage.setItem("stafData", JSON.stringify(staffData));
+  localStorage.setItem("staffData", JSON.stringify(staffData));
   console.log(localStorage);
 }
